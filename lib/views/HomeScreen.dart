@@ -56,8 +56,8 @@ class _HomeScreenState extends State<HomeScreen>
               ]),
         ),
         body:  Center(child:_selectedIndexForTabBar == 0 ?
-        _listOfIconsForBottomNavigationBar.elementAt(_selectedIndexForBottomNavigationBar):
-        _listOfIconsForTabBar.elementAt(_selectedIndexForTabBar - 1)),
+        _listOfScreenForBottomNavigationBar.elementAt(_selectedIndexForBottomNavigationBar):
+        _listOfScreenForTabBar.elementAt(_selectedIndexForTabBar - 1)),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _selectedIndexForBottomNavigationBar,
           onTap: _onItemTappedForBottomNavigationBar,
@@ -105,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen>
   }
 
 
-  static List<Widget> _listOfIconsForBottomNavigationBar = <Widget>[
+  static List<Widget> _listOfScreenForBottomNavigationBar = <Widget>[
     Icon(Icons.home),
     Icon(Icons.search),
     Icon(Icons.account_circle),
@@ -113,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen>
 
 
   //2
-  static List<Widget> _listOfIconsForTabBar = <Widget>[
+  static List<Widget> _listOfScreenForTabBar = <Widget>[
     OverviewScreen(),
     StatusScreen(),
     ApplicationScreen()
